@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <title>Compositore didattico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">LABORATORIO MUSICALE</p>
+        <h1>Compositore didattico</h1>
+        <p class="intro">Scegli un'opzione per ogni regola, poi aggiungila alla composizione.</p>
+      </div>
+      <div class="counter" aria-live="polite"><span id="count">0</span><span> / 16 elementi</span></div>
+    </header>
+
+    <section class="rules-panel" aria-labelledby="rules-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / REGOLE</p><h2 id="rules-title">Scegli le opzioni</h2></div>
+        <p class="helper">Seleziona una tessera in ogni categoria.</p>
+      </div>
+      <div id="categories" class="categories"></div>
+      <div class="actions">
+        <button id="add" class="button button-primary" type="button"><span aria-hidden="true">＋</span> Aggiungi elemento</button>
+        <button id="undo" class="button button-secondary" type="button" disabled><span aria-hidden="true">−</span> Rimuovi ultimo</button>
+        <p id="status" class="status" role="status" aria-live="polite">La composizione è vuota.</p>
+      </div>
+    </section>
+
+    <section class="composition-panel" aria-labelledby="composition-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">02 / COMPOSIZIONE</p><h2 id="composition-title">La tua sequenza</h2></div>
+        <p class="helper">Trascina gli elementi per cambiare l'ordine.</p>
+      </div>
+      <p class="drag-hint"><span aria-hidden="true">⠿</span> Trascina un elemento con il mouse o il dito. Su touchscreen puoi anche usare i pulsanti freccia.</p>
+      <div id="composition" class="composition" aria-live="polite">
+        <div class="empty-state">
+          <div class="empty-symbol" aria-hidden="true">＋</div>
+          <p>La composizione apparirà qui.</p>
+          <span>Seleziona le regole e premi “Aggiungi elemento”.</span>
+        </div>
+      </div>
+    </section>
+    <footer>Strumento didattico · Nessun dato viene salvato. Ricaricando la pagina, la composizione riparte vuota.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
