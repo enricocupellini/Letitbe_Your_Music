@@ -2,23 +2,26 @@
    Model: state. View: render*. Controller: eventi delegati.
    Ogni elemento conserva gli INDICI delle opzioni, non copie di oggetti UI. */
 const categories = [
-  {name:"ARMONIA",accent:"#25815b",bg:"#edf8f0",line:"#cce7d3",tint:"#d8efdf",options:[
+  {name:"TEMA nei movimenti iniziali",accent:"#25815b",bg:"#edf8f0",line:"#cce7d3",tint:"#d8efdf",options:[
+    {label:"Stazionario",image:"assets/placeholders/andamento-a.svg"},
+    {label:"Sale",image:"assets/placeholders/andamento-b.svg"},
+    {label:"Scende",image:"assets/placeholders/andamento-c.svg"},
+    {label:"Salta",image:"assets/placeholders/andamento-d.svg"},
+    {label:"in Pausa",image:"assets/placeholders/andamento-e.svg"}
+  ]},
+  {name:"TEMA nei movimenti finali",accent:"#286fc4",bg:"#edf5ff",line:"#c9def8",tint:"#dceaff",options:[
+    {label:"Stazionario",image:"assets/placeholders/andamento-a.svg"},
+    {label:"Sale",image:"assets/placeholders/andamento-b.svg"},
+    {label:"Scende",image:"assets/placeholders/andamento-c.svg"},
+    {label:"Salta",image:"assets/placeholders/andamento-d.svg"},
+    {label:"in Pausa",image:"assets/placeholders/andamento-e.svg"}
+  ]},
+  {name:"ARMONIA",accent:"#c95042",bg:"#fff0ed",line:"#f2c9c2",tint:"#f7d8d3",options:[
     {label:"Tonica",image:"assets/placeholders/armonia-a.svg"},
     {label:"Sopratonica",image:"assets/placeholders/armonia-b.svg"},
     {label:"Sottodominante",image:"assets/placeholders/armonia-c.svg"},
     {label:"Dominante",image:"assets/placeholders/armonia-d.svg"},
     {label:"Sopradominante",image:"assets/placeholders/armonia-e.svg"}
-  ]},
-  {name:"PROFILO",accent:"#286fc4",bg:"#edf5ff",line:"#c9def8",tint:"#dceaff",options:[
-    {label:"Stazionario",image:"assets/placeholders/andamento-a.svg"},
-    {label:"Sale o scende",image:"assets/placeholders/andamento-b.svg"},
-    {label:"Salta",image:"assets/placeholders/andamento-c.svg"}
-  ]},
-  {name:"TEMA",accent:"#c95042",bg:"#fff0ed",line:"#f2c9c2",tint:"#f7d8d3",options:[
-    {label:"Tema",image:"assets/placeholders/voce-a.svg"},
-    {label:"Pausa",image:"assets/placeholders/voce-b.svg"},
-    {label:"Tema/Pausa",image:"assets/placeholders/voce-c.svg"},
-    {label:"Pausa/Tema",image:"assets/placeholders/voce-d.svg"}
   ]}
 ];
 const MAX_ITEMS = 16;
