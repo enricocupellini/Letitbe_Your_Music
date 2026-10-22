@@ -1,30 +1,30 @@
 # Compositore didattico
 
-Webapp statica in HTML, CSS e JavaScript puro. Nessun framework, server o database necessario.
+Versione essenziale con stile originale e un colore distinto per ogni categoria:
+- Ritmo: rosso tenue
+- Melodia: blu
+- Armonia: verde
+- Dinamica: viola
 
-## Avvio
-Apri `index.html` nel browser.
+Include selezione sincronizzata degli elementi, modifica immediata delle regole, drag and drop con mouse/touch, frecce per riordinare, massimo 16 elementi e nessun salvataggio persistente.
 
-## Funzioni
-- Categorie con tre opzioni ciascuna, configurabili in `app.js`.
-- Il pulsante `+` aggiunge un elemento con una copia delle scelte correnti.
-- Il pulsante `−` rimuove l'ultimo elemento della sequenza corrente.
-- Massimo 16 elementi.
-- Riordino con drag and drop usando il mouse.
-- Supporto touch tramite trascinamento su dispositivi compatibili.
-- Pulsanti freccia su ogni elemento per spostarlo a sinistra/destra, utili anche su touchscreen.
-- Frecce della tastiera quando un elemento ha il focus.
-- Nessun salvataggio persistente: il refresh azzera la composizione.
+## Personalizzare
+Modifica `categories` all'inizio di `app.js`. I placeholder SVG sono in `assets/placeholders/`.
 
-## Personalizzare categorie e immagini
-Modifica l'array `categories` all'inizio di `app.js`. Ogni categoria ha un `name` e tre `options` con `label` e `image`.
-I segnaposto SVG sono in `assets/placeholders/`. Puoi sostituire i percorsi con file PNG, JPG o SVG, per esempio `assets/immagini/ritmo-a.png`. Aggiungi i tuoi file al repository.
+## GitHub Pages
+Carica tutti i file nella radice del repository pubblico, poi vai in Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save.
 
-## Pubblicare su GitHub Pages
-1. Crea un repository pubblico su https://github.com/new.
-2. Carica tutti i file e le cartelle nella radice del repository (mantieni `index.html` nella radice).
-3. Vai in **Settings → Pages**.
-4. Seleziona **Deploy from a branch**, branch `main`, cartella `/ (root)`, quindi salva.
-5. Attendi il completamento della pubblicazione e apri l'URL indicato da GitHub Pages.
+## Modifica di un elemento esistente
+1. Clicca un rettangolo della sequenza.
+2. Le opzioni corrispondenti a ritmo, melodia, armonia e dinamica si evidenziano in alto.
+3. Con il rettangolo ancora selezionato, clicca una nuova opzione: quel rettangolo viene aggiornato immediatamente, senza aggiungerne un altro e senza cambiarne la posizione.
+4. Seleziona un altro rettangolo per modificarlo, oppure riclicca quello attivo / clicca nello spazio vuoto per deselezionarlo.
 
-Guida ufficiale: https://docs.github.com/en/pages/quickstart
+
+Aggiornamento: il pulsante “Rimuovi elemento selezionato” elimina l'elemento attivo, anche se non è l'ultimo. “Aggiungi elemento” inserisce sempre un nuovo elemento in fondo alla sequenza.
+
+
+Comportamento aggiornato: quando si aggiunge un elemento, nessun elemento della sequenza rimane selezionato e le regole in alto tornano alle scelte iniziali.
+
+
+Configurazione regole aggiornata: Armonia (5 scelte), Andamento (3 scelte), Voce (4 scelte). Le schede mostrano Armonia in alto a sinistra, Andamento in alto a destra e Voce in basso a tutta larghezza.
